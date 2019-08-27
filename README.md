@@ -46,7 +46,7 @@ config.json
 ```
 
 replies.json
-```
+```json
 {
   // You can have multiple replies per bot.
   "replies": [
