@@ -13,9 +13,7 @@ A procedurally generating natural language Reddit bot capable of acting on a var
 In a CMD/terminal,
 
 ```
-git clone https://github.com/eb3095/glamour.git
-cd glamour
-npm install
+npm install glamour-redditbot
 ```
 Modify the configs in ./config and then start the bot with,
 
