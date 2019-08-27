@@ -1,0 +1,39 @@
+{
+  "name": "glamour",
+  "version": "1.0.0",
+  "description": "A procedurally generating natural language Reddit bot capable of acting on a variety of triggers such as comment sentiment, emotion, and phrases",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eb3095/glamour.git"
+  },
+  "keywords": [
+    "reddit",
+    "bot",
+    "glamour",
+    "natural",
+    "language",
+    "procedural",
+    "emotion",
+    "sentiment",
+    "human"
+  ],
+  "author": "Charisma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eb3095/glamour/issues"
+  },
+  "homepage": "https://github.com/eb3095/glamour#readme",
+  "dependencies": {
+    "emotional_alert": "^2.0.2",
+    "mongodb": "^3.3.0",
+    "saslprep": "^1.0.3",
+    "sentiment": "^5.0.2",
+    "snoostorm": "^1.1.2",
+    "snoowrap": "^1.19.0"
+  }
+}

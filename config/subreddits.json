@@ -1,0 +1,10 @@
+{
+  "subreddits": [
+    {
+      "name": "cats",
+      "cooldown": 11,
+      "pollTime": 5,
+      "results": 50
+    }
+  ]
+}

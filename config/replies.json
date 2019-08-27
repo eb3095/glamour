@@ -1,0 +1,69 @@
+{
+  "replies": [
+    {
+      "name": "I Love Kitties",
+      "replyDelay": 1,
+      "delayFuzz": 60,
+      "cooldown": 5,
+      "subreddits": [
+        "cats"
+      ],
+      "bannedSubreddits": [
+        "dogs",
+        "puppies"
+      ],
+      "bannedUsers": [
+        "automoderator"
+      ],
+      "detailCount": 2,
+      "typos": true,
+      "oncePerUser": true,
+      "oncePerSubmission": true,
+      "prefaces": [
+        "I {love|adore|go bonkers for} kitties too!",
+        "There is nothing I {adore|love} more than kitties!"
+      ],
+      "details": [
+        "They are SOOOO cuddly!",
+        "They are so warm and soft!",
+        "They are just great!"
+      ],
+      "conclusions": [
+        "I just love them so much!",
+        "OoOoO, I just can't help my self"
+      ],
+      "triggers": [
+        {
+          "type": "sentiment",
+          "value": "notNegative",
+          "overrides": {
+            "kitties": 5
+          }
+        },
+        {
+          "type": "phrase",
+          "included": true,
+          "phrases": [
+            "kitty",
+            "kittens",
+            "cat",
+            "cute"
+          ]
+        },
+        {
+          "type": "phrase",
+          "included": false,
+          "phrases": [
+            "puppy",
+            "puppies"
+          ]
+        },
+        {
+          "type": "emotion",
+          "emotion": "anger",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

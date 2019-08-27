@@ -1,0 +1,16 @@
+{
+  "redditCredentials": {
+    "appID": "",
+    "appSecret": "",
+    "userAgent": "Glamour/{version} by Charisma",
+    "username": "",
+    "password": ""
+  },
+  "databaseCredentials": {
+    "host": "localhost",
+    "database": "bot",
+    "user": "bot",
+    "password": ""
+  },
+  "debugMode": true
+}

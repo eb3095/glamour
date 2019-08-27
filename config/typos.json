@@ -1,0 +1,95 @@
+{
+  "typos": {
+    "typoRate": 100,
+    "typoCommas": true,
+    "typoApostrophes": true,
+    "typoCase": true,
+    "speechParts": [
+      {
+        "string": "they're",
+        "typos": [
+          "theyre",
+          "there",
+          "their"
+        ]
+      },
+      {
+        "string": "theyre",
+        "typos": [
+          "there",
+          "their"
+        ]
+      },
+      {
+        "string": "their",
+        "typos": [
+          "there",
+          "theyre"
+        ]
+      },
+      {
+        "string": "there",
+        "typos": [
+          "theyre",
+          "their"
+        ]
+      },
+      {
+        "string": "your",
+        "typos": [
+          "youre"
+        ]
+      },
+      {
+        "string": "youre",
+        "typos": [
+          "your"
+        ]
+      },
+      {
+        "string": "you're",
+        "typos": [
+          "your"
+        ]
+      },
+      {
+        "string": "you",
+        "typos": [
+          "u"
+        ]
+      },
+      {
+        "string": "ei",
+        "typos": [
+          "ie",
+          "ee"
+        ]
+      },
+      {
+        "string": "ie",
+        "typos": [
+          "ee",
+          "ei"
+        ]
+      },
+      {
+        "string": "ai",
+        "typos": [
+          "ia"
+        ]
+      },
+      {
+        "string": "ia",
+        "typos": [
+          "ai"
+        ]
+      },
+      {
+        "string": "qu",
+        "typos": [
+          "q"
+        ]
+      }
+    ]
+  }
+}
