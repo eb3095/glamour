@@ -9,7 +9,7 @@ const repliesConfig = require('./config/replies.json');
 const typosConfig = require('./config/typos.json');
 const snoowrap = require('snoowrap');
 const snoostorm = require('snoostorm');
-const Task = require('./libraries/tasker.js').Task;
+const Task = require('async2sync').Task;
 const Reply = require('./libraries/reply.js').Reply;
 const Typo = require('./libraries/typo.js').Typo;
 const emotionDetection = require('emotional_alert');
@@ -342,10 +342,6 @@ function addToReplyQueue(reply, event) {
 }
 
 function processReplyQueues() {
-    if (subreddits.length < 1) {
-        log("Not listening on any subs. Shutting down!");
-        process.exit();
-    }
     let waitTask = new Task();
     waitTask.callback = processReplyQueues;
     subreddits.forEach(subreddit => {

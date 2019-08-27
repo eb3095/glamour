@@ -1,5 +1,5 @@
 {
-  "name": "glamour",
+  "name": "glamour-redditbot",
   "version": "1.0.0",
   "description": "A procedurally generating natural language Reddit bot capable of acting on a variety of triggers such as comment sentiment, emotion, and phrases",
   "main": "bot.js",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/eb3095/glamour#readme",
   "dependencies": {
+    "async2sync": "^1.0.0",
     "emotional_alert": "^2.0.2",
     "mongodb": "^3.3.0",
     "saslprep": "^1.0.3",
