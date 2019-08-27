@@ -119,6 +119,26 @@ replies.json
 }
 ```
 
+Possible Emotions
+```
+joy
+worry
+sadness
+anger
+friendly
+delight
+disgust
+fear
+courage
+surprise
+calm
+depression
+danger
+relief
+neutral
+vulnerable
+```
+
 subreddits.json
 ```
 {
