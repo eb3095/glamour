@@ -114,7 +114,7 @@ replies.json
         {
           "type": "emotion",
           "emotion": "anger", // Possible emotions are bellow. Vulnerability is 0-5, emotions are probabilities 0.0-1.0
-          "value": 0 // If 0, must be 0 or not this emotion, anything over one requires the value to be >= to it
+          "value": 0 // If 0, must be 0 or not this emotion, anything over 0 requires the value to be >= to it
         }
       ]
     }
