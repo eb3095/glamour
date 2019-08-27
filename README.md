@@ -3,11 +3,14 @@ A procedurally generating natural language Reddit bot capable of acting on a var
 
 ### Requirements
 
-This requires MongoDB as a database. You will also need a Reddit API key and a Reddit user. This was made and tested with the newest version of NodeJS, v11.15.0. I do not know if it will work on older versions and it is untested on any other version. This was created on Linux, it should work on Windows but it was not tested.
+* MongoDB for the database
+* Reddit API and User
+* Tested on NodeJS v11.15.0, may work on other versions
+* Only tested on Linux, should work on Windows
 
 ### Installation
 
-This was created on Linux, it should work on Windows but it was not tested. The instructions are for Linux.
+In a CMD/terminal,
 
 ```
 git clone https://github.com/eb3095/glamour.git
@@ -252,6 +255,6 @@ typos.json
 }
 ```
 
-### Warning
+### Disclaimer
 
 I'm not responsible for what this bot is used for, or the consequences thereof. It is a powerful tool that can be used to do many great, or terrible things. Use common sense.
