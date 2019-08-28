@@ -1,6 +1,6 @@
 {
   "name": "glamour-redditbot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A procedurally generating natural language Reddit bot capable of acting on a variety of triggers such as comment sentiment, emotion, and phrases",
   "main": "bot.js",
   "scripts": {
