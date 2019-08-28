@@ -35,6 +35,7 @@
     "saslprep": "^1.0.3",
     "sentiment": "^5.0.2",
     "snoostorm": "^1.1.2",
-    "snoowrap": "^1.19.0"
+    "snoowrap": "^1.19.0",
+    "typogen": "^1.0.0"
   }
 }
