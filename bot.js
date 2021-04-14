@@ -142,7 +142,9 @@ function startListener(subreddit) {
                 log(`Comment Received: ${comment.id} Subreddit: ${subreddit.displayName} Message: ${comment.body}`);
                 let rebuild = [];
 
-                comment.body.split(" ").forEach(word => {
+                let body = comment.body.replace(/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g, "");
+
+                body.split(" ").forEach(word => {
                     if (word.length < 3) {
                         return;
                     }
