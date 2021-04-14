@@ -80,8 +80,14 @@ exports.Reply = class {
             return false;
         }
 
+        // Remove emoji
+        let body = event.comment.body.replace(/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g, "");
+        if (body == "") {
+            return false;
+        }
+
         this.triggers.some(trigger => {
-            if (!trigger.isTriggered(event.comment.body)) {
+            if (!trigger.isTriggered(body)) {
                 triggered = false;
                 return true;
             }
