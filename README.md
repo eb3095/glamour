@@ -3,7 +3,6 @@ A procedurally generating natural language Reddit bot capable of acting on a var
 
 ### Requirements
 
-* MongoDB for the database
 * Reddit API and User
 * Tested on NodeJS v11.15.0, may work on other versions
 * Only tested on Linux, should work on Windows
@@ -34,13 +33,6 @@ config.json
     "username": "",
     "password": ""
   },
-  // This only works with MongoDB
-  "databaseCredentials": {
-    "host": "localhost",
-    "database": "bot",
-    "user": "bot",
-    "password": ""
-  },
   // This is on by default and is very verbose. It doesn't post comments and gives emotional/sentiment read outs
   "debugMode": true
 }
@@ -52,7 +44,7 @@ replies.json
   // You can have multiple replies per bot.
   "replies": [
     {
-      "name": "I Love Kitties",      
+      "name": "I Love Kitties",
       "replyDelay": 1, // How long after a comment until the bot replies in minutes
       "delayFuzz": 60, // A random amount of seconds up to the provided number added to the delay
       "cooldown": 5, // Minutes until the reply will trigger again, this skips detected comments until it is off cooldown
@@ -63,7 +55,7 @@ replies.json
         "dogs",
         "puppies"
       ],
-      "bannedUsers": [ // Users this wont reply to 
+      "bannedUsers": [ // Users this wont reply to
         "automoderator"
       ],
       "detailCount": 2, // How many unique details to use
@@ -85,7 +77,7 @@ replies.json
       ],
       "triggers": [ // These all need to be true for the reply to be used
         {
-          "type": "sentiment", 
+          "type": "sentiment",
           "value": "notNegative", // Can be positive, negative, neutral, notPositive, and notNegative
           "overrides": { // Overrides for words and their values, -5 to 5
             "kitties": 5

@@ -1,6 +1,6 @@
 exports.Phrase = class {
 
-    constructor (trigger) {
+    constructor(trigger) {
         this.phrases = trigger.phrases;
         this.included = trigger.included;
         this.type = trigger.type;

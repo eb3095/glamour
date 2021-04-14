@@ -17,7 +17,7 @@ function inlineRandomized(string) {
 
 exports.Reply = class {
 
-    constructor (rep, typo) {
+    constructor(rep, typo) {
         this.name = rep.name;
         this.typo = typo;
         this.replyDelay = rep.replyDelay * 60000;
@@ -59,7 +59,7 @@ exports.Reply = class {
         });
     }
 
-    isTriggered (event) {
+    isTriggered(event) {
         let date = new Date();
         let triggered = true;
         let sub = event.comment.subreddit.display_name.toLowerCase();
@@ -90,7 +90,7 @@ exports.Reply = class {
         return triggered;
     };
 
-    generateMessage () {
+    generateMessage() {
         let message = [];
 
         if (this.prefaces.length > 0) {
@@ -117,7 +117,7 @@ exports.Reply = class {
             if (this.details.length === 1) {
                 details.push(this.details[0]);
             } else {
-                let clone = this.details.slice(0);
+                let clone = [...this.details];
                 while (details.length < this.detailCount) {
                     let pick = Math.floor(Math.random() * clone.length);
                     details.push(clone[pick]);
@@ -155,7 +155,7 @@ exports.Reply = class {
         return message.join(" ");
     };
 
-    putOnCooldown () {
+    putOnCooldown() {
         let date = new Date();
         this.cooldownExpires = date.getTime() + this.cooldown;
     };

@@ -1,22 +1,20 @@
 const Sentiment = require('sentiment');
 const sentiment = new Sentiment();
 
+let validTriggerValues = ["positive", "negative", "neutral", "notNegative", "notPositive"];
+
 exports.SentimentTrigger = class {
 
-    constructor (trigger) {
+    constructor(trigger) {
         this.value = trigger.value;
         this.type = trigger.type;
-        if (this.value !== "positive"
-            && this.value !== "negative"
-            && this.value !== "neutral"
-            && this.value !== "notNegative"
-            && this.value !== "notPositive") {
+        if (!validTriggerValues.includes(this.value)) {
             throw new Error(`${this.value} is not a valid value for the Sentiment trigger`);
         }
         this.overrides = trigger.overrides;
     }
 
-    isTriggered (message) {
+    isTriggered(message) {
         let rebuild = [];
 
         message.split(" ").forEach(word => {

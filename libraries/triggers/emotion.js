@@ -1,27 +1,31 @@
 const emotionDetection = require('emotional_alert');
 
+let validEmotions = [
+    "joy",
+    "worry",
+    "sadness",
+    "anger",
+    "friendly",
+    "delight",
+    "disgust",
+    "fear",
+    "courage",
+    "surprise",
+    "calm",
+    "depression",
+    "danger",
+    "relief",
+    "neutral",
+    "vulnerable"
+];
+
 exports.Emotion = class {
 
-    constructor (trigger) {
+    constructor(trigger) {
         this.emotion = trigger.emotion;
         this.type = trigger.type;
 
-        if (this.emotion !== "joy"
-            && this.emotion !== "worry"
-            && this.emotion !== "sadness"
-            && this.emotion !== "anger"
-            && this.emotion !== "friendly"
-            && this.emotion !== "delight"
-            && this.emotion !== "disgust"
-            && this.emotion !== "fear"
-            && this.emotion !== "courage"
-            && this.emotion !== "surprise"
-            && this.emotion !== "calm"
-            && this.emotion !== "depression"
-            && this.emotion !== "danger"
-            && this.emotion !== "relief"
-            && this.emotion !== "neutral"
-            && this.emotion !== "vulnerable") {
+        if (!validEmotions.includes(this.emotion)) {
             throw new Error(`${this.emotion} is not a valid emotion for the emotional trigger`);
         }
 
@@ -46,23 +50,23 @@ exports.Emotion = class {
         let naturalized = rebuild.join(" ");
 
         let result = emotionDetection(naturalized);
-        let emote;
-        let val = 0;
-        switch (this.emotion) {
-            case "vulnerable":
-                val = result.emotional;
-                if (val >= this.value) {
-                    return true;
-                }
-                break;
-            default:
-                emote = result.bayes.prediction;
-                val = result.bayes.proba;
-                if (this.emotion !== emote && this.value === 0) {
-                    return true;
-                }
-                return val >= this.value;
 
+        if (this.emotion == "vulnerable") {
+            if (result.emotional >= this.value) {
+                return true;
+            }
+            return false;
         }
+
+        // For exclusion emotions
+        if (this.emotion !== result.bayes.prediction && this.value == 0) {
+            return true;
+        }
+
+        if (this.emotion !== result.bayes.prediction) {
+            return false;
+        }
+
+        return result.bayes.proba >= this.value;
     }
 };
